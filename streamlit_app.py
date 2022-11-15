@@ -18,6 +18,12 @@ with col2:
 with col3:
     st.write("")
 
+auth = False
 ## We have  to authenticate the user before they can view the contents of the webpage
+while auth == False:
 
-st.text_input("")
+    col1, col2, col3 = st.columns((1,0.5,1))
+    with col2:
+        st.markdown("### Please Authenticate using the Username and Password you were provided")
+        username = st.text_input("Username...")
+        password = st.text_input("Password...")
