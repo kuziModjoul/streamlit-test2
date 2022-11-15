@@ -14,7 +14,7 @@ with col1:
     st.write("")
 
 with col2:
-    st.markdown(" <h1 style='text-align: center;'> This is an Example Streamlit with Authentication</h1>", unsafe_allow_html=True)
+    st.markdown(" <h1 style='text-align: center;'> Streamlit with Authentication</h1>", unsafe_allow_html=True)
 
 with col3:
     st.write("")
