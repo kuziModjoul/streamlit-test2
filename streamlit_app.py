@@ -69,7 +69,7 @@ if logged_in:
         def convert_df(df):
             return df.to_csv(index=False).encode('utf-8')
 
-        st.dataframe(df)
+        st.dataframe(df, use_container_width=st.session_state.use_container_width)
         csv = convert_df(df)
 
         st.download_button(
