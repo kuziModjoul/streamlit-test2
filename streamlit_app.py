@@ -20,7 +20,6 @@ with col3:
 
 
 
-
 def check_password():
     """Returns `True` if the user had a correct password."""
 
@@ -55,7 +54,9 @@ def check_password():
     else:
         # Password correct.
         return True
-
-if check_password():
-    st.write("Here goes your normal Streamlit app...")
-    st.button("Click me")
+col1, col2, col3 = st.columns((.1,1,.1))
+with col2:
+    st.markdown("Please Authenticate Using the Username and Password assigned to you :)")
+    if check_password():
+        st.write("Here goes your normal Streamlit app...")
+        st.button("Click me")
