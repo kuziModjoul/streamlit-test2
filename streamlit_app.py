@@ -63,7 +63,7 @@ with st.sidebar:
         st.write("You're Logged in now!!! You can close the sidebar")
 
 if logged_in:
-        df = pd.read_csv("dir/file.csv")
+        df = pd.read_csv("https://github.com/kuziModjoul/streamlit-test2/blob/main/Wi-Fi%20scan%20data%20(0%2C0).csv")
 
         @st.experimental_memo
         def convert_df(df):
