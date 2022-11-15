@@ -20,7 +20,7 @@ with col3:
 
 auth = False
 ## We have  to authenticate the user before they can view the contents of the webpage
-while auth == False:
+if auth == False:
 
     col1, col2, col3 = st.columns((.5,1,.5))
     with col2:
