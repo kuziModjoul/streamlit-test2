@@ -22,7 +22,7 @@ auth = False
 ## We have  to authenticate the user before they can view the contents of the webpage
 while auth == False:
 
-    col1, col2, col3 = st.columns((1,0.5,1))
+    col1, col2, col3 = st.columns((.5,1,.5))
     with col2:
         st.markdown("### Please Authenticate using the Username and Password you were provided")
         username = st.text_input("Username...")
