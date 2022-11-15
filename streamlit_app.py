@@ -54,8 +54,7 @@ def check_password():
     else:
         # Password correct.
         return True
-col1, col2, col3 = st.columns((.5,1,.5))
-with col2:
+with st.sidebar:
     st.markdown("Please Authenticate Using the Username and Password assigned to you :)")
     if check_password():
         st.write("Here goes your normal Streamlit app...")
