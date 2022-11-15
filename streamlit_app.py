@@ -1,4 +1,5 @@
 import streamlit as st
+import pandas as pd
 
 
 
@@ -62,4 +63,19 @@ with st.sidebar:
         st.write("You're Logged in now!!! You can close the sidebar")
 
 if logged_in:
-    st.markdown("# you Can see this now")
+        df = pd.read_csv("dir/file.csv")
+
+        @st.experimental_memo
+        def convert_df(df):
+            return df.to_csv(index=False).encode('utf-8')
+
+
+        csv = convert_df(df)
+
+        st.download_button(
+        "Press to Download",
+        csv,
+        "file.csv",
+        "text/csv",
+        key='download-csv'
+        )
