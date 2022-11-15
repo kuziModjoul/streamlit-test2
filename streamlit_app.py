@@ -54,8 +54,12 @@ def check_password():
     else:
         # Password correct.
         return True
+logged_in  =  False
 with st.sidebar:
-    st.markdown("Please Authenticate Using the Username and Password assigned to you :)")
+
     if check_password():
-        st.write("Here goes your normal Streamlit app...")
-        st.button("Click me")
+        logged_in  =  True
+        st.write("You're Logged in now!!! You can close the sidebar")
+
+if logged_in:
+    st.markdown("you Can see this now")
