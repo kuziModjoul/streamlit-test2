@@ -73,7 +73,7 @@ if logged_in:
         csv = convert_df(df)
 
         st.download_button(
-        "Press to Download",
+        "Click to Download",
         csv,
         "file.csv",
         "text/csv",
